@@ -1,0 +1,16 @@
+java -jar *.jar 
+java -jar *.jar 1> normal.txt 2> hiba.txt       write
+java -jar *.jar 1>> normal.txt 2>> hiba.txt     append
+java -jar *.jar 2> NUL
+java -jar mehet.jar >mind.txt 2>&1              mindketto egy fajlba
+
+input 0
+output 1
+err 2
+
+dir /b | sor /rs
+
+2 szamrendszer
+1       0001
+2       0010
+3       0011
