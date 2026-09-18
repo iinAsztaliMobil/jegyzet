@@ -36,3 +36,36 @@ tagadas (negalas)
 ~A | B 
 0  | 1
 1  | 0
+
+
+no build tools
+central sona
+mariadb-java-client-3.5.10.jar implementalas
+
+create database bama;
+
+show tables;
+grant all privileges on bama.* to bama@localhost identified by 'titok';
+
+laza fuggoseg ismetles + uml abrak
+
+fuggoseg befecskendezes:
+class DataService {
+    DataSource source;
+    public DataService(DataSource source) {
+        this.source = source;
+    }
+}
+
+angularban: inject
+
+beadando
+1002
+interface megvalositas 
+https://github.com/oktat/tan/blob/master/asztali_mobil/02_OOP.md
+
+1019 
+allomany es adatbazis kezeles
+
+1204
+gui
