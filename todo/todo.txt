@@ -1,0 +1,4 @@
+egyeztetes backenddel token autentikaciorol
+ui javitasa
+rendering
+ui javitasaaaa
