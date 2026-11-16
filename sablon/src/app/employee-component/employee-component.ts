@@ -25,4 +25,8 @@ employees = [
  
   ];  
 
+  toggleFilter(){
+    this.showFilter = !this.toggleFilter;
+  }
+
 }
