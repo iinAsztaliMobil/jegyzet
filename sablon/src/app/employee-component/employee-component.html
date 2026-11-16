@@ -1,25 +1,47 @@
 <h2>Dolgozók</h2>
 
-<label for="actCity">Szűrés településre</label>
-<input type="text" [(ngModel)]="actCity" id="actCity">
+@if (showFilter) {
+  <div class="row g-3 mb-3">
+    <div class="col-md-6">
+      <label for="actName" class="form-label">Szűrés névre</label>
+      <input
+        type="text"
+        id="actName"
+        class="form-control"
+        [(ngModel)]="actName"
+      />
+    </div>
 
-<table class="table-primary table-striped table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Név</th>
-            <th>Település</th>
-            <th>Fizetés</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for(emp of employees | empfilter:actCity; track emp.id) {
-            <tr>
-                <td>{{ emp.id }}</td>
-                <td>{{ emp.name }}</td>
-                <td>{{ emp.city }}</td>
-                <td>{{ emp.salary }}</td>
-            </tr>
-        }
-    </tbody>
+    <div class="col-md-6">
+      <label for="actCity" class="form-label">Szűrés településre</label>
+      <input
+        type="text"
+        id="actCity"
+        class="form-control"
+        [(ngModel)]="actCity"
+      />
+    </div>
+  </div>
+}
+
+<table class="table table-primary table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Név</th>
+      <th>Település</th>
+      <th>Fizetés</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (emp of employees | empfilter: { city:actCity, name:actName,}; track emp.id) {
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.city }}</td>
+        <td>{{ emp.salary }}</td>
+      </tr>
+    }
+  </tbody>
 </table>

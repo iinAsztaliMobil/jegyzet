@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class EmployeeComponent {
 
+showFilter = true;
+
+actName! : string;
 actCity! : string;
 
 employees = [
